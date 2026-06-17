@@ -1,6 +1,8 @@
 # Python-Timer-App-v2
 A countdown timer with a custom dark UI, built with PyQt5
 
+Polished countdown timer with custom dark theme UI, built with PyQt5 and MVVM architecture
+
 ## What it does
 A countdown timer with hours, minutes, and seconds input. 
 Includes start, pause, resume, and reset functionality, 
