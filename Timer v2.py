@@ -112,11 +112,11 @@ class View(QMainWindow):
         self.vm = vm
 
         self.setWindowTitle("Sleek Timer")
-        self.setFixedSize(380, 450) # Keep the app structured and gadget-like
+        self.setFixedSize(380, 450) 
         
        
 
-        # Global Premium Dark Stylesheet
+        
         self.setStyleSheet("""
             QMainWindow {
                 background-color: #121214;
@@ -174,7 +174,7 @@ class View(QMainWindow):
             }
         """)
 
-        # --- UI ELEMENTS ---
+        
         self.title_label = QLabel("Countdown Timer")
         self.title_label.setObjectName("TitleLabel")
         
@@ -199,7 +199,7 @@ class View(QMainWindow):
         self.button1 = QPushButton("Start")
         self.button2 = QPushButton("Reset")
 
-        # --- LAYOUT DESIGN ---
+        
         self.layout = QVBoxLayout()
         self.layout.setContentsMargins(30, 40, 30, 40)
         self.layout.setSpacing(20)
@@ -211,7 +211,7 @@ class View(QMainWindow):
         self.input_row.addWidget(self.minutes)
         self.input_row.addWidget(self.seconds)
 
-        # Build clean structural spacing
+        
         self.layout.addWidget(self.title_label, alignment=Qt.AlignCenter)
         self.layout.addStretch()
         self.layout.addWidget(self.label, alignment=Qt.AlignCenter)
@@ -227,13 +227,13 @@ class View(QMainWindow):
         container.setLayout(self.layout)
         self.setCentralWidget(container)
 
-        # --- CONNECTIONS ---
+        
         self.button1.clicked.connect(self.handle_button)
         self.button2.clicked.connect(self.handle_reset)
         self.vm.time_changed.connect(self.label.setText)
         self.vm.button_text_changed.connect(self.button1.setText)
         
-        # Connect state changes to handle UI locking mechanics
+        
         self.vm.state_changed.connect(self.handle_state_changed)
 
     def get_duration(self):
