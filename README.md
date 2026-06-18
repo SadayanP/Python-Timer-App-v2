@@ -9,6 +9,8 @@ Includes start, pause, resume, and reset functionality,
 with inputs locked while the timer is running and a clean 
 dark-themed interface.
 
+![Timer App Screenshot](image.png)
+
 ## How to run
 1. Install PyQt5: pip install PyQt5
 2. Run: python timer_v2.py
